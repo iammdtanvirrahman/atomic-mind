@@ -1,0 +1,69 @@
+{
+  "name": "ATOMIC MIND — Default",
+  "fallback": [
+    "Tell me a little more about that.",
+    "What makes you think about this?",
+    "Can you explain that from another angle?"
+  ],
+  "rules": [
+    {
+      "id": "greeting",
+      "priority": 100,
+      "keywords": ["hello", "hi", "hey", "assalamu alaikum"],
+      "responses": [
+        "Hello. What would you like to explore?",
+        "Hi. What is on your mind?"
+      ]
+    },
+    {
+      "id": "identity",
+      "priority": 90,
+      "pattern": "\\bwho are you\\b",
+      "responses": [
+        "I am ATOMIC MIND, a modular rule-based conversational engine. I am still evolving."
+      ]
+    },
+    {
+      "id": "name",
+      "priority": 80,
+      "pattern": "\\bmy name is (.+)",
+      "responses": [
+        "Good to meet you, {1}. I can use that during this session."
+      ]
+    },
+    {
+      "id": "feeling",
+      "priority": 70,
+      "keywords": ["sad", "unhappy", "upset", "depressed"],
+      "responses": [
+        "What happened that made you feel this way?",
+        "Would you like to tell me what has been weighing on you?"
+      ]
+    },
+    {
+      "id": "project",
+      "priority": 60,
+      "keywords": ["project", "build", "create", "code"],
+      "responses": [
+        "Let's break the project into smaller, testable parts.",
+        "What should the first working version be able to do?"
+      ]
+    },
+    {
+      "id": "because",
+      "priority": 50,
+      "pattern": "\\bbecause (.+)",
+      "responses": [
+        "Is that the main reason: {1}?"
+      ]
+    },
+    {
+      "id": "remember",
+      "priority": 40,
+      "pattern": "\\bremember that (.+)",
+      "responses": [
+        "I can store explicit facts in session memory in a future memory command."
+      ]
+    }
+  ]
+}
